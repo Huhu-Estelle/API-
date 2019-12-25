@@ -84,7 +84,7 @@ def get_access_token():
      API_KEY = 'xxx'
      SECRET_KEY = 'xxx'
 
-     url = 'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=%s&client_secret=%s' % (API_KEY, SECRET_KEY)
+    
      response = requests.post(url)
 
      access_token = response.content.decode('utf-8')
@@ -99,7 +99,7 @@ def get_file_content(filePath):
           return fp.read()
 
 def get_recognization(access_token):
-     host = 'https://aip.baidubce.com/rest/2.0/image-classify/v2/dish?access_token=' + access_token
+   
      header = {'Content-Type' : 'appliapplication/x-www-form-urlencodedcation/x'}
      
      #这里改成自己的文件路径
@@ -131,8 +131,7 @@ if __name__ == '__main__':
 		"has_calorie": true,
 		"name": "对话情绪识别",
 		"probability": "0.396031"
-		"baike_info": {
-			"baike_url": "http://baike.baidu.com/item/%E9%85%B8%E6%B1%A4%E9%B1%BC/1754055",
+	
 		
 		}
 	},
