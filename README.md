@@ -78,7 +78,7 @@
 ## API1.使用水平
 ## 1.声纹识别API输入
 代码示例：
-、、、
+```
 from aip import AipSpeech
 
 APP_ID = '15180100'
@@ -96,10 +96,10 @@ def get_file_content(filePath):
 client.asr(get_file_content('代码示例1.pcm'), 'pcm', 16000, {
     'dev_pid': 1536,
 })
-、、、
+```
 
 ## 声纹识别API输出
-、、、
+```
 {
     "err_no": 0,
     "err_msg": "success.",
@@ -107,7 +107,7 @@ client.asr(get_file_content('代码示例1.pcm'), 'pcm', 16000, {
     "sn": "235C524F-23TR-562F-73DR-9157WOMR2A2H",
     "result": ["用户1"]
 }
-、、、
+```
 ## 2.对话情绪识别API输入
 
 ## 对话情绪识别API输出
