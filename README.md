@@ -66,7 +66,7 @@
 ## API使用流程图--帮助用户场景和途径理解
 ![image](https://github.com/Huhu-Estelle/API-/blob/master/API%E5%9C%BA%E6%99%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 ## 原型3.原型文档 5%
-[原型原型](http://nfunm022.gitee.io/api)
+[原型文档](http://nfunm022.gitee.io/api)
 
 ## 原型4.口头操作说明 5%
 - 1.在【首页】，实现设备蓝牙连接；
