@@ -103,15 +103,49 @@ client.asr(get_file_content('代码示例1.pcm'), 'pcm', 16000, {
 {
     "err_no": 0,
     "err_msg": "success.",
-    "corpus_no": "15984125203285346378",
+    "corpus_no": "15984125203278346378",
     "sn": "235C524F-23TR-562F-73DR-9157WOMR2A2H",
     "result": ["用户1"]
 }
 ```
 ## 2.对话情绪识别API输入
+```
+from aip import AipSpeech
 
+APP_ID = '15180100'
+API_KEY = '4Lls6ixvcoB7lmacnLNKmH8f'
+SECRET_KEY = 'LBlvF01tGMU6Bir2Vb4wjUXBwZCDXyws'
+
+client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
+
+# 读取文件
+def get_emotion(content):
+    token=get_token()
+    url = 'https://aip.baidubce.com/rpc/2.0/nlp/v1/emotion'
+    params = dict()
+    params['scene'] = 'talk'
+    params['text'] = content
+    params = json.dumps(params).encode('utf-8')
+    access_token = token
+    url = url + "?access_token=" + access_token
+    url = url + "&charset=UTF-8"
+    request = urllib.request.Request(url=url, data=params)
+    request.add_header('Content-Type', 'application/json')
+    response = urllib.request.urlopen(request)
+    content = response.read()
+    if content:
+        content=content.decode('utf-8')
+        data = json.loads(content)
+        return data
+    else:
+        return ''
+    print (get_emotion('本来今天高高兴兴'))
+```
 ## 对话情绪识别API输出
+```
+{'log_id': 8567920447474187651, 'text': '本来今天高高兴兴', 'items': [{'subitems': [{'prob': 0.501008, 'label': 'happy'}], 'replies': ['笑一笑十年少'], 'prob': 0.501008, 'label': 'optimistic'}, {'subitems': [], 'replies': [], 'prob': 0.49872, 'label': 'neutral'}, {'subitems': [], 'replies': [], 'prob': 0.000272128, 'label': 'pessimistic'}]}
 
+```
 ## API2.使用比较分析
 - 百度语音API能够摆脱生僻字和拼音障碍，将所输入文字，直接用语音的方式输入，并且有着百度输入法和魅族输入法的合作案例。
 - 讯飞语音API有着连续短语音转文字服务；支持方言语音输入。
