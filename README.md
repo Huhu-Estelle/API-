@@ -37,7 +37,8 @@
  略带口音的普通话、粤语四川话方言、英文，均可有效识别。但对口音浓厚、生僻字有一定障碍。
  融合百度自然语言处理技术，近场中文普通话识别准确率达98% 
 -  3.[百度文本情绪识别](https://ai.baidu.com/tech/nlp_apply/emotion_detection)      
- - ![image](https://github.com/Huhu-Estelle/API-/blob/master/%E6%83%85%E7%BB%AA%E5%88%86%E7%B1%BB.png)                识别情绪分为两级。一级情绪分为正向、中性、负向3种，正向情绪细分为：喜爱、愉快、感谢3种；负向情绪细分为：抱怨、愤怒、厌恶、恐惧、悲伤5种 。      
+ - ![image](https://github.com/Huhu-Estelle/API-/blob/master/%E6%83%85%E7%BB%AA%E5%88%86%E7%B1%BB.png)              
+ 识别情绪分为两级。一级情绪分为正向、中性、负向3种，正向情绪细分为：喜爱、愉快、感谢3种；负向情绪细分为：抱怨、愤怒、厌恶、恐惧、悲伤5种 。      
  缺点是：文本中需要给出明显的形容词，才能帮助情绪识别的细化。而语言中的隐藏情绪不能被有效识别。      
  例如：       
  - ![image](https://github.com/Huhu-Estelle/API-/blob/master/%E6%83%85%E7%BB%AA%E8%AF%86%E5%88%AB1.jpg)
@@ -65,10 +66,10 @@
 ## 原型2.信息设计 5%
 ## API使用流程图--帮助用户场景和途径理解
 ![image](https://github.com/Huhu-Estelle/API-/blob/master/API%E5%9C%BA%E6%99%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
-## 原型3.原型文档 5%
-[原型文档](http://nfunm022.gitee.io/api)
+## 原型3.原型文档 
+### [原型文档](http://nfunm022.gitee.io/api)
 
-## 原型4.口头操作说明 5%
+## 原型4.口头操作说明
 - 1.在【首页】，实现设备蓝牙连接；
 - 2.【听歌】界面，用户只需语音输入口令，根据声波，APP通过讯飞声纹识别API判断该声纹与哪位用户的声音匹配，根据其平常曲风推荐歌曲；
 - 3.用户输入的语音内容中，通过百度短语音识别API将语音转文字，百度文本情绪识别API识别该用户对自己的情绪较清晰的描述，推荐适合该用户当下的心情适合听的歌。
